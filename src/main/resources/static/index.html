@@ -17,11 +17,12 @@ $("#button").click(function(){
 
   var username=$("#username").val().trim();
   var password=$("#password").val().trim();
+  var data = '{\"username\":\"' + username + '\",\"password\":\"'+ password+'\"}';
   $.ajax({
       type: "post",
       url: "/login",
       contentType:'application/json;charset=utf-8',
-      data: '{"username":username,"password":password}',
+      data: data,
       datatype: "json",
       success: function (msg) {
           alert(msg)
