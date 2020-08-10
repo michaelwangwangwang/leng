@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.Mapping;
 @Mapper
 public interface MainDao {
 
-    @Select("SELECT * FROM users WHERE username=#{username}")
+    @Select("SELECT * FROM user WHERE username=#{username}")
     User select(String username);
 
 }
